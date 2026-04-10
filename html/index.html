@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>TaskFlow</title>
+    <link rel="icon" type="image/svg+xml" href="../img/taskflow-icon.svg">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
-    <script src="js/script.js"></script>
+    <header>
+        <img id="taskFlowLogo" src="../img/taskflow-icon.svg" alt="Logo Task Flow">
+        <h1>TaskFlow</h1>
+    </header>
+
+    <main>
+        <!-- Formulário de nova tarefa -->
+        <section class="new-task">
+            <form>
+                <input id="newTaskInput" type="text" placeholder="Insira uma nova tarefa">
+                <button id="addTaskButton">Adicionar</button>
+            </form>
+        </section>
+        <!-- Controles de busca -->
+        <section class="controls">
+            <Label for="priority">Nível de prioridade</Label>
+            <select name="priority" id="prioritySelector">
+                <option value="priority_high">🔴 Alta prioridade</option>
+                <option value="priority_medium">🟡 Média prioridade</option>
+                <option value="priority_low">🟢 Baixa prioridade</option>
+            </select>
+            <Label for="status">Status</Label>
+            <select name="status" id="statusSelector">
+                <option value="status_done">✅ Concluída</option>
+                <option value="status_pending">⏳ Pendente</option>
+            </select>
+        </section>
+        <!-- Estatísticas -->
+        <section class="stats">
+
+        </section>
+        <!-- Tarefas -->
+        <section class="tasks">
+            <ul id="taskList">
+
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Task Flow &copy; Todos os direitos reservados.</h3>
+    </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>

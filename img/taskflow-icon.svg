@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 680" role="img">
+  <title>Task Flow Icon</title>
+  <desc>Ícone Task Flow — seta em fluxo com check</desc>
+
+  <defs>
+    <style>
+      @keyframes flow { from { stroke-dashoffset: 40; } to { stroke-dashoffset: 0; } }
+      @keyframes pop { 0%{transform:scale(1)} 50%{transform:scale(1.08)} 100%{transform:scale(1)} }
+      .stream  { stroke-dasharray: 6 5; animation: flow 1.4s linear infinite; }
+      .stream2 { stroke-dasharray: 6 5; animation: flow 1.4s linear infinite .5s; }
+      .stream3 { stroke-dasharray: 6 5; animation: flow 1.4s linear infinite 1s; }
+      .badge   { transform-origin: 510px 340px; animation: pop 3s ease-in-out infinite; }
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a2018"/>
+      <stop offset="100%" stop-color="#0e1510"/>
+    </linearGradient>
+    <linearGradient id="stripe1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7aab5a"/>
+      <stop offset="100%" stop-color="#4a7c3f"/>
+    </linearGradient>
+    <linearGradient id="stripe2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7aab5a" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4a7c3f" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="stripe3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7aab5a" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4a7c3f" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- BG -->
+  <rect x="100" y="100" width="480" height="480" rx="120" fill="url(#bg)"/>
+  <rect x="100" y="100" width="480" height="480" rx="120" fill="none" stroke="white" stroke-opacity="0.06" stroke-width="1.5"/>
+
+  <!-- Bar 1 — complete -->
+  <rect x="175" y="222" width="260" height="46" rx="12" fill="white" fill-opacity="0.05"/>
+  <rect x="175" y="222" width="260" height="46" rx="12" fill="none" stroke="url(#stripe1)" stroke-width="1" stroke-opacity="0.6"/>
+  <rect x="175" y="222" width="260" height="46" rx="12" fill="url(#stripe1)" fill-opacity="0.12"/>
+  <line class="stream" x1="175" y1="245" x2="435" y2="245" stroke="url(#stripe1)" stroke-width="1.5" stroke-opacity="0.4"/>
+  <circle cx="455" cy="245" r="16" fill="url(#stripe1)" fill-opacity="0.2" stroke="url(#stripe1)" stroke-width="1.5"/>
+  <path d="M447 245 L453 251 L463 238" stroke="#7aab5a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Bar 2 — in progress -->
+  <rect x="175" y="317" width="260" height="46" rx="12" fill="white" fill-opacity="0.04"/>
+  <rect x="175" y="317" width="260" height="46" rx="12" fill="none" stroke="url(#stripe2)" stroke-width="1"/>
+  <rect x="175" y="317" width="160" height="46" rx="12" fill="url(#stripe2)" fill-opacity="0.18"/>
+  <line class="stream2" x1="175" y1="340" x2="335" y2="340" stroke="url(#stripe1)" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="455" cy="340" r="16" fill="none" stroke="white" stroke-opacity="0.15" stroke-width="1.5"/>
+  <path d="M455 324 A16 16 0 0 1 455 356" stroke="#4a7c3f" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+  <!-- Bar 3 — pending -->
+  <rect x="175" y="412" width="260" height="46" rx="12" fill="white" fill-opacity="0.03"/>
+  <rect x="175" y="412" width="260" height="46" rx="12" fill="none" stroke="white" stroke-opacity="0.1" stroke-width="1"/>
+  <rect x="175" y="412" width="55" height="46" rx="12" fill="white" fill-opacity="0.05"/>
+  <line class="stream3" x1="175" y1="435" x2="230" y2="435" stroke="white" stroke-width="1.5" stroke-opacity="0.2"/>
+  <circle cx="455" cy="435" r="16" fill="none" stroke="white" stroke-opacity="0.15" stroke-width="1.5"/>
+
+  <!-- Connectors -->
+  <path d="M435 245 Q510 245 510 340" stroke="url(#stripe1)" stroke-width="1.5" stroke-opacity="0.25" fill="none" stroke-dasharray="4 4"/>
+  <path d="M435 435 Q510 435 510 340" stroke="white" stroke-width="1" stroke-opacity="0.1" fill="none" stroke-dasharray="4 4"/>
+
+  <!-- Flow badge -->
+  <g class="badge">
+    <circle cx="510" cy="340" r="22" fill="#4a7c3f" fill-opacity="0.25" stroke="#7aab5a" stroke-width="1.5" stroke-opacity="0.6"/>
+    <circle cx="510" cy="340" r="12" fill="#4a7c3f"/>
+    <path d="M504 340 L510 333 L516 340 L510 347 Z" fill="white"/>
+  </g>
+
+</svg>
