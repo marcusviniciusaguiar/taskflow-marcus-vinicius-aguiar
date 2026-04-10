@@ -5,11 +5,94 @@
     box-sizing: border-box;
 }
 
+
 /* Variáveis */
 :root {
     --primary: #7aab5a;
+    --primary-dark: #4a7c3f;
+
     --bg-body: #1a2018;
+    --bg-header: #141a12;
+    --bg-main: #1a2018;
+    --bg-footer: #111510;
+
     --text-primary: #e8ede4;
     --text-secondary: #9aab8e;
     --text-muted: #5a6b54;
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+
+/* Header */
+header {
+    background: var(--bg-header);
+    color: var(--text-primary);
+    position: sticky;
+    max-width: 480px;
+    max-height: 10dvh;
+    align-items: center;
+}
+
+img {
+    max-width: 15%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.flow {
+  font-weight: 300;
+  color: var(--primary);
+}
+
+/* Main */
+main {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    flex: 1;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.new-task form {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+#newTaskInput {
+  flex: 1;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.controls select {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+    background: var(--bg-footer);
+    color: var(--text-muted);
+    max-width: 480px;
+    
 }

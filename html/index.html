@@ -9,8 +9,12 @@
 </head>
 <body>
     <header>
-        <img id="taskFlowLogo" src="../img/taskflow-icon.svg" alt="Logo Task Flow">
-        <h1>TaskFlow</h1>
+        <div class="logo">
+            <img id="taskFlowLogo" src="../img/taskflow-icon-transparent.svg" alt="Logo Task Flow">
+            <span class="logo-text">
+                <span class="task">Task</span> <span class="flow">Flow</span>
+            </span>
+        </div>
     </header>
 
     <main>
@@ -23,13 +27,14 @@
         </section>
         <!-- Controles de busca -->
         <section class="controls">
-            <Label for="priority">Nível de prioridade</Label>
+            <label>Nível de prioridade</label>
             <select name="priority" id="prioritySelector">
                 <option value="priority_high">🔴 Alta prioridade</option>
                 <option value="priority_medium">🟡 Média prioridade</option>
                 <option value="priority_low">🟢 Baixa prioridade</option>
             </select>
-            <Label for="status">Status</Label>
+
+            <Label>Status</label>
             <select name="status" id="statusSelector">
                 <option value="status_done">✅ Concluída</option>
                 <option value="status_pending">⏳ Pendente</option>
