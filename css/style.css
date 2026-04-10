@@ -1,0 +1,15 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+    --primary: #7aab5a;
+    --bg-body: #1a2018;
+    --text-primary: #e8ede4;
+    --text-secondary: #9aab8e;
+    --text-muted: #5a6b54;
+}
