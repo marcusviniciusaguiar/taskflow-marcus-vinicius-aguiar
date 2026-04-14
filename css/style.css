@@ -68,13 +68,13 @@ main {
     margin: 0 auto;
 }
 
-.new-task form {
+#newTaskForm {
   display: flex;
   gap: 8px;
   width: 100%;
 }
 
-#newTaskInput {
+#titleInput {
   flex: 1;
 }
 
@@ -85,9 +85,6 @@ main {
   width: 100%;
 }
 
-.controls select {
-  flex: 1;
-}
 
 /* Footer */
 footer {
