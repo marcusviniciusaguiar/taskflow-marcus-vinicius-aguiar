@@ -377,3 +377,22 @@ newTaskForm.addEventListener("submit", (event) => {
 
 });
 
+// BUSCA E FILTROS EVENTOS
+findInput.addEventListener("input", () => {
+
+    filterTasks();
+
+});
+
+priorityFilter.addEventListener("change", () => {
+
+    filterTasks();
+
+});
+
+statusSelector.addEventListener("change", () => {
+
+    filterTasks();
+
+});
+
