@@ -396,3 +396,25 @@ statusSelector.addEventListener("change", () => {
 
 });
 
+
+// MODAIS EVENTOS
+
+confirmDelete.addEventListener("click", () => {
+
+    confirmDeleteTask();
+
+});
+
+confirmClear.addEventListener("click", () => {
+
+    clearCompletedTasks();
+
+});
+
+saveEdit.addEventListener("click", () => {
+
+    saveEditTask();
+
+});
+
+
