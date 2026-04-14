@@ -30,8 +30,6 @@ const saveEdit = document.querySelector("#saveEdit");
 
 // ESTADO DA APLICAÇÃO
 let tasks = [];
-let editTaskId;
-let deleteTaskId;
 let currentTaskId;
 
 
