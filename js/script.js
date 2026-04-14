@@ -286,3 +286,23 @@ const saveEditTask = () => {
     }
 
 };
+
+
+// DELETANDO TAREFA
+const openDeleteModal = (id) => {
+
+    currentTaskId = id;
+    deleteModal.showModal();
+
+};
+
+const confirmDeleteTask = () => {
+
+    tasks = tasks.filter(task => task.id !== currentTaskId);
+
+    saveTask();
+    filterTasks();
+
+    currentTaskId = null;
+
+};
