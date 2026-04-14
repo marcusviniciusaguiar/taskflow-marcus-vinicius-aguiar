@@ -1,5 +1,12 @@
 // ELEMENTOS
 
+// Stats
+const totalCount = document.querySelector("#totalCount");
+const pendingCount = document.querySelector("#pendingCount");
+const doneCount = document.querySelector("#doneCount");
+const progressBar = document.querySelector("#progressBar");
+const progressPercentage = document.querySelector("#progressPercentage");
+
 // Formulário de nova tarefa
 const newTaskForm = document.querySelector("#newTaskForm");
 const titleInput = document.querySelector("#titleInput");
