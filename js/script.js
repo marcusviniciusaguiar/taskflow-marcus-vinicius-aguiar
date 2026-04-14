@@ -154,6 +154,7 @@ const createNewTask = (title, priority) => {
     saveTask();
     showTasks();
     updateStats();
+    updateStats();
 
 };
 
@@ -271,6 +272,7 @@ const toggleTaskStatus = (id) => {
 
         saveTask();
         filterTasks();
+        updateStats();
 
     }
 
@@ -303,6 +305,7 @@ const saveEditTask = () => {
 
         saveTask();
         filterTasks();
+        updateStats();
 
         currentTaskId = null;
 
@@ -325,6 +328,7 @@ const confirmDeleteTask = () => {
 
     saveTask();
     filterTasks();
+    updateStats();
 
     currentTaskId = null;
 
