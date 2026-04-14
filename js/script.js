@@ -6,6 +6,7 @@ const pendingCount = document.querySelector("#pendingCount");
 const doneCount = document.querySelector("#doneCount");
 const progressBar = document.querySelector("#progressBar");
 const progressPercentage = document.querySelector("#progressPercentage");
+const clearTasksDone = document.querySelector("#clearTasksDone");
 
 // Formulário de nova tarefa
 const newTaskForm = document.querySelector("#newTaskForm");
@@ -135,6 +136,16 @@ const updateStats = () => {
 
     progressPercentage.textContent = `${percentage}%`;
     progressBar.style.width = `${percentage}%`;
+
+};
+
+const clearCompletedTAsks = () => {
+
+    tasks = tasks.filter(task => !task.done);
+
+    saveTask();
+    filterTasks();
+    updateStats();
 
 };
 
