@@ -365,3 +365,15 @@ confirmClear.addEventListener("click", () => {
 
 });
 
+// FORMULÁRIO NOVA TASK EVENTOS
+newTaskForm.addEventListener("submit", (event) => {
+
+    event.preventDefault();
+
+    createNewTask(titleInput.value, prioritySelect.value);
+
+    titleInput.value = "";
+    titleInput.focus();
+
+});
+
