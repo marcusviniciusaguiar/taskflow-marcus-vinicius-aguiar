@@ -418,3 +418,8 @@ saveEdit.addEventListener("click", () => {
 });
 
 
+// INICIALIZAÇÃO
+loadTasks();
+filterTasks();
+updateStats();
+
