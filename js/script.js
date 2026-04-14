@@ -79,3 +79,36 @@ const getPriorityEmoji = (priority) => {
 
 };
 
+// SALVAR DADOS NO NAVEGADOR
+const saveTask = () => {
+
+    localStorage.setItem("tasks_taskFlow", JSON.stringify(tasks));
+
+};
+
+const loadTasks = () => {
+
+    const savedTasks = localStorage.getItem("tasks_taskFlow");
+
+    if(savedTasks) {
+        tasks = JSON.parse(savedTasks);
+    } else {
+        tasks = [];
+    }
+
+};
+
+const darkModeStatus = (status) => {
+
+    localStorage.setItem("darkMode_taskFlow", status);
+
+};
+
+const loadDarkMode = () => {
+    const darkMode = localStorage.getItem("darkMode_taskFlow");
+    darkMode === "true";
+    return darkMode;
+};
+
+
+
