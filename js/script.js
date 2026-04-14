@@ -32,6 +32,7 @@ const saveEdit = document.querySelector("#saveEdit");
 let tasks = [];
 let editTaskId;
 let deleteTaskId;
+let currentTaskId;
 
 
 // FUNÇÕES REUTILIZÁVEIS
@@ -231,5 +232,57 @@ const showTasks = (tasksArray) => {
     });
 
     tasksCount.textContent = tasksArray.length;
+
+};
+
+
+
+// EDITANDO TAREFA
+const toggleTaskStatus = (id) => {
+
+    const task = tasks.find(task => task.id === id);
+
+    if(task) {
+
+        task.done = !task.done;
+
+        saveTask();
+        filterTasks();
+
+    }
+
+};
+
+const openEditModal = (id) => {
+
+    currentTaskId = id;
+    const task = tasks.find(task => task.id === id);
+
+    if(task) {
+
+        editTitleInput.value = task.title;
+        editPriority.value = task.priority;
+
+        editModal.showModal();
+
+    }
+
+};
+
+const saveEditTask = () => {
+
+    const task = tasks.find(task => task.id === currentTaskId);
+
+    if(task) {
+
+        task.title = editTitleInput.value;
+        task.priority = editPriority.value;
+
+        saveTask();
+        filterTasks();
+
+        currentTaskId = null;
+
+    }
 
 };
