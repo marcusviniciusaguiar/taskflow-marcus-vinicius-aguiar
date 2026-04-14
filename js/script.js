@@ -35,13 +35,13 @@ let deleteTaskId;
 
 
 // FUNÇÕES REUTILIZÁVEIS
-const gerarId = () => {
+const generateId = () => {
 
     return Date.now();
 
 };
 
-const formatarData = (date) => {
+const formatDate = (date) => {
 
     const d = new Date(date);
     const day = String(d.getDate()).padStart(2,"0");
@@ -79,6 +79,7 @@ const getPriorityEmoji = (priority) => {
 
 };
 
+
 // SALVAR DADOS NO NAVEGADOR
 const saveTask = () => {
 
@@ -105,10 +106,86 @@ const darkModeStatus = (status) => {
 };
 
 const loadDarkMode = () => {
+
     const darkMode = localStorage.getItem("darkMode_taskFlow");
     darkMode === "true";
     return darkMode;
+
 };
 
 
+
+// CRIANDO TAREFAS
+const createNewTask = (title, priority) => {
+
+    const newTask = {
+        id: generateId(),
+        title: title,
+        priority: priority,
+        done: false,
+        creationDate: new Date().toISOString()
+    };
+
+    tasks.unshift(newTask);
+    saveTask();
+    showTasks();
+    updateStats();
+
+};
+
+const createTaskCard = (task) => {
+
+    const card = document.createElement("div");
+    card.classList.add("task-card");
+    card.classList.add(`priority-${task.priority}`);
+    card.dataset.id = task.id;
+
+    if(task.done) {
+        card.classList.add("done");
+    }
+
+    card.innerHTML = `
+        <div class="task-content">
+            <input type="checkbox" id="taskCheckbox" ${task.done ? "checked": ""}>
+            <div class="task-info"> 
+                <span class="task-title">${task.title}</span>
+                <div class="task-details"> 
+                    <span class="task-date">📆 ${formatDate(task.creationDate)}</span>
+                    <span class="task-priority-span">
+                        ${getPriorityEmoji(task.priority)} ${getPriorityText(task.priority)}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="task-actions"> 
+            <button id="editTaskButton">🖊 Editar</button>
+            <button id="deleteTaskButton">🗑 Excluir</button>
+        </div>
+    `;
+
+    const editTaskButton = card.querySelector("#editTaskButton");
+    const deleteTaskButton = card.querySelector("#deleteTaskButton");
+    const taskCheckbox = card.querySelector("#taskCheckbox");
+
+    editTaskButton.addEventListener("click", () => {
+
+        openEditModal(task.id);
+
+    });
+
+    deleteTaskButton.addEventListener("click", () => {
+
+        openDeleteModal(task.id);
+
+    });
+
+    taskCheckbox.addEventListener("change", () => {
+
+        toggleTaskStatus(task.id);
+
+    });
+
+    return card;
+
+};
 
