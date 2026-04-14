@@ -120,6 +120,24 @@ const loadDarkMode = () => {
 };
 
 
+// STATS
+const updateStats = () => {
+
+    const total = tasks.length;
+    const completed = tasks.filter(task => task.done).length;
+    const pending = total - completed;
+
+    const percentage = total > 0 ? Math.round((completed / total) * 100): 0;
+
+    totalCount.textContent = total;
+    pendingCount.textContent = pending;
+    completedCount.textContent = completed;
+
+    progressPercentage.textContent = `${percentage}%`;
+    progressBar.style.width = `${percentage}%`;
+
+};
+
 
 // CRIANDO TAREFAS
 const createNewTask = (title, priority) => {
