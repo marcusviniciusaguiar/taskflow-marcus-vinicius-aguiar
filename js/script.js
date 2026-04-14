@@ -167,8 +167,7 @@ const createNewTask = (title, priority) => {
 
     tasks.unshift(newTask);
     saveTask();
-    showTasks();
-    updateStats();
+    filterTasks();
     updateStats();
 
 };
