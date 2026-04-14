@@ -32,9 +32,9 @@
                 <form id="newTaskForm">
                     <input id="titleInput" type="text" placeholder="Adicionar tarefa" required>
                         <select id="prioritySelect">
-                            <option value="low">🟢 Baixa</option>
-                            <option value="medium">🟡 Média</option>
-                            <option value="high">🔴 Alta</option>
+                            <option value="low">🟢 Baixa prioridade</option>
+                            <option value="medium">🟡 Média prioridade</option>
+                            <option value="high">🔴 Alta prioridade</option>
                         </select>
                         <button class="new-task-button">Adicionar</button>
                 </form>
@@ -106,7 +106,7 @@
             <div class="modal-header">
                 <h3>Editando tarefa</h3>
             </div>
-            <input type="text" id="editTitleInput" placeholder="Novo título da tarefa">
+            <input type="text" id="editTitleInput" placeholder="Novo título da tarefa" required>
             <select id="editPriority">
                 <option value="low">🟢 Baixa</option>
                 <option value="medium">🟡 Média</option>
