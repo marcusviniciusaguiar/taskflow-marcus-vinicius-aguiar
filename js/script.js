@@ -189,3 +189,47 @@ const createTaskCard = (task) => {
 
 };
 
+// LENDO E EXIBINDO TAREFAS
+const filterTasks = () => {
+
+    let filteredTasks = [...tasks];
+
+    const searchText = findInput.value.toLowerCase();
+    filteredTasks = filteredTasks.filter(task => task.title.toLowerCase().includes(searchText));
+
+
+    const statusValue = statusSelector.value;
+    if(statusValue !== "all") {
+        filteredTasks = filteredTasks.filter(task => {
+            if(statusValue === "done") {
+                return task.done === true;
+            } else {
+                return task.done === false;
+            }
+        });
+    }
+
+
+    const priorityValue = priorityFilter.value;
+    if(priorityValue !== "all") {
+        filteredTasks = filteredTasks.filter(task => task.priority === priorityValue);
+    }
+
+    showTasks(filteredTasks);
+
+};
+
+const showTasks = (tasksArray) => {
+
+    taskList.innerHTML = "";
+
+    tasksArray.forEach(task => {
+
+        const card = createTaskCard(task);
+        taskList.appendChild(card);
+
+    });
+
+    tasksCount.textContent = tasksArray.length;
+
+};
