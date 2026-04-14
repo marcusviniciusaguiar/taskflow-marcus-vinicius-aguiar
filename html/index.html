@@ -83,6 +83,43 @@
     <footer>
         <p>Task Flow &copy; Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Modais -->
+
+    <!-- Deletar -->
+    <dialog id="deleteModal">
+        <form method="dialog">
+            <div class="modal-header">
+                <h3>Excluindo tarefa</h3>
+            </div>
+            <h4>Realmente deseja excluir essa tarefa? Essa ação é irreversível.</h4>
+            <div class="modal-actions">
+                <button value="cancel" class="cancel-button">Cancelar</button>
+                <button id="confirmDelete">Excluir</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Editar -->
+     <dialog id="editModal">
+        <form method="dialog">
+            <div class="modal-header">
+                <h3>Editando tarefa</h3>
+            </div>
+            <input type="text" id="editTitleInput" placeholder="Novo título da tarefa">
+            <select id="editPriority">
+                <option value="low">🟢 Baixa</option>
+                <option value="medium">🟡 Média</option>
+                <option value="high">🔴 Alta</option>
+            </select>
+            <div class="modal-actions">
+                <button value="cancel">Cancelar</button>
+                <button id="saveEdit">Salvar tarefa</button>
+            </div>
+        </form>
+     </dialog>
+
+
     <script src="../js/script.js"></script>
 </body>
 </html>
