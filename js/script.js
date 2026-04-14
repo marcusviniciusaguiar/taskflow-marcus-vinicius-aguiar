@@ -136,7 +136,7 @@ const updateStats = () => {
 
     totalCount.textContent = total;
     pendingCount.textContent = pending;
-    completedCount.textContent = completed;
+    doneCount.textContent = completed;
 
     progressPercentage.textContent = `${percentage}%`;
     progressBar.style.width = `${percentage}%`;
