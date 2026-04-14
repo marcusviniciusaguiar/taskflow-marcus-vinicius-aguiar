@@ -28,6 +28,10 @@ const taskList = document.querySelector("#taskList");
 const deleteModal = document.querySelector("#deleteModal");
 const confirmDelete = document.querySelector("#confirmDelete");
 
+// Modal de limpar concluídos
+const clearModal = document.querySelector("#clearModal");
+const confirmClear = document.querySelector("#confirmClear");
+
 // Modal de Edição
 const editModal = document.querySelector("#editModal");
 const editTitleInput = document.querySelector("#editTitleInput");
@@ -139,7 +143,7 @@ const updateStats = () => {
 
 };
 
-const clearCompletedTAsks = () => {
+const clearCompletedTasks = () => {
 
     tasks = tasks.filter(task => !task.done);
 
@@ -344,3 +348,20 @@ const confirmDeleteTask = () => {
     currentTaskId = null;
 
 };
+
+
+// EVENTOS
+
+// STATS EVENTOS
+clearTasksDone.addEventListener("click", () => {
+
+    clearModal.showModal();
+
+});
+
+confirmClear.addEventListener("click", () => {
+    
+    clearCompletedTasks();
+
+});
+
