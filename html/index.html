@@ -18,42 +18,74 @@
     </header>
 
     <main>
-        <!-- Formulário de nova tarefa -->
-        <section class="new-task">
-            <form>
-                <input id="newTaskInput" type="text" placeholder="Insira uma nova tarefa">
-                <button id="addTaskButton">Adicionar</button>
-            </form>
-        </section>
-        <!-- Controles de busca -->
-        <section class="controls">
-            <label>Nível de prioridade</label>
-            <select name="priority" id="prioritySelector">
-                <option value="priority_high">🔴 Alta prioridade</option>
-                <option value="priority_medium">🟡 Média prioridade</option>
-                <option value="priority_low">🟢 Baixa prioridade</option>
-            </select>
-
-            <Label>Status</label>
-            <select name="status" id="statusSelector">
-                <option value="status_done">✅ Concluída</option>
-                <option value="status_pending">⏳ Pendente</option>
-            </select>
-        </section>
         <!-- Estatísticas -->
         <section class="stats">
+             <div id="statsContainer">
 
+             </div>
         </section>
+
+
+        <!-- Formulário de nova tarefa -->
+        <section class="new-task-section">
+            <div id="newTaskContainer">
+                <form id="newTaskForm">
+                    <input id="titleInput" type="text" placeholder="Adicionar tarefa" required>
+                    <div class="new-task-actions">
+                        <select id="categorySelect">
+                            <option value="work">💼 Trabalho</option>
+                            <option value="personal">👤 Pessoal</option>
+                            <option value="studies">📚 Estudos</option>
+                        </select>
+                        <select id="prioritySelect">
+                            <option value="low">🟢 Baixa</option>
+                            <option value="medium">🟡 Média</option>
+                            <option value="high">🔴 Alta</option>
+                        </select>
+                        <button class="newTaskButton">Adicionar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- Controles -->
+         <section class="controls">
+            <!-- Busca de tarefas -->
+            <section class="find-task-section">
+                <div id="findTaskContainer">
+                    <input id="findInput" type="text" placeholder="Buscar tarefa">
+                </div>
+            </section>
+
+            <!-- Filtros de exibição -->
+            <section class="display-filters-section">
+                <select id="priorityFilter">
+                    <option value="all">Prioridade</option>
+                    <option value="high">🔴 Alta prioridade</option>
+                    <option value="medium">🟡 Média prioridade</option>
+                    <option value="low">🟢 Baixa prioridade</option>
+                </select>
+                <select id="statusSelector">
+                    <option value="all">📝 Todas</option>
+                    <option value="done">✅ Concluída</option>
+                    <option value="pending">⏳ Pendente</option>
+                </select>
+            </section>
+        </section>
+
         <!-- Tarefas -->
         <section class="tasks">
-            <ul id="taskList">
-
-            </ul>
+            <div id="tasksContainer">
+                <ul id="taskList">
+                <!-- Adicionar via JS -->
+                </ul>
+            </div>
         </section>
     </main>
 
     <footer>
-        <h3>Task Flow &copy; Todos os direitos reservados.</h3>
+        <p>Task Flow &copy; Todos os direitos reservados.</p>
     </footer>
     <script src="../js/script.js"></script>
 </body>
