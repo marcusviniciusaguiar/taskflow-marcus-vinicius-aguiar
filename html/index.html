@@ -20,7 +20,7 @@
     <main>
         <!-- Estatísticas -->
         <section class="stats">
-             <div id="statsContainer">
+             <div class="stats-container">
 
              </div>
         </section>
@@ -28,7 +28,7 @@
 
         <!-- Formulário de nova tarefa -->
         <section class="new-task-section">
-            <div id="newTaskContainer">
+            <div class="new-task-container">
                 <form id="newTaskForm">
                     <input id="titleInput" type="text" placeholder="Adicionar tarefa" required>
                         <select id="prioritySelect">
@@ -36,7 +36,7 @@
                             <option value="medium">🟡 Média</option>
                             <option value="high">🔴 Alta</option>
                         </select>
-                        <button class="newTaskButton">Adicionar</button>
+                        <button class="new-task-button">Adicionar</button>
                 </form>
             </div>
         </section>
@@ -46,7 +46,7 @@
          <section class="controls">
             <!-- Busca de tarefas -->
             <section class="find-task-section">
-                <div id="findTaskContainer">
+                <div class="find-task-container">
                     <input id="findInput" type="text" placeholder="Buscar tarefa">
                 </div>
             </section>
@@ -69,7 +69,10 @@
 
         <!-- Tarefas -->
         <section class="tasks">
-            <div id="tasksContainer">
+            <div class="tasks-container">
+                <div class="tasks-header">
+                    <h3>Tarefas <span id="tasksCount">0</span></h3>
+                </div>
                 <ul id="taskList">
                 <!-- Adicionar via JS -->
                 </ul>
