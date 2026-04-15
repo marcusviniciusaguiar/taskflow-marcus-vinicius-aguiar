@@ -37,28 +37,39 @@ header {
     background: var(--bg-header);
     color: var(--text-primary);
     position: sticky;
-    max-width: 480px;
-    max-height: 10dvh;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-img {
-    max-width: 15%;
+#taskFlowLogo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+}
+
+.logo-text {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
 }
 
 .task {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
 .flow {
-  font-weight: 300;
+  font-weight: 500;
   color: var(--primary);
 }
 
