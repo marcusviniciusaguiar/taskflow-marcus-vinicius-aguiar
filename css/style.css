@@ -1,60 +1,60 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    min-width: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 
 /* Variáveis */
 :root {
-    --primary: #7aab5a;
-    --primary-dark: #4a7c3f;
+  --primary: #7aab5a;
+  --primary-dark: #4a7c3f;
 
-    --bg-body: #1a2018;
-    --bg-header: #141a12;
-    --bg-main: #1a2018;
-    --bg-footer: #111510;
+  --bg-body: #1a2018;
+  --bg-header: #141a12;
+  --bg-main: #1a2018;
+  --bg-footer: #111510;
 
-    --bg-card: #222a20;
-    --bg-card-hover: #2a3327;
-    --bg-element: #141a12;
-    --border-color: #2c3629;
+  --bg-card: #222a20;
+  --bg-card-hover: #2a3327;
+  --bg-element: #141a12;
+  --border-color: #2c3629;
 
-    --text-primary: #e8ede4;
-    --text-secondary: #9aab8e;
-    --text-muted: #5a6b54;
+  --text-primary: #e8ede4;
+  --text-secondary: #9aab8e;
+  --text-muted: #5a6b54;
 }
 
 /* Body */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
-    background-color: var(--bg-body);
-    color: var(--text-primary);
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  overflow-x: hidden;
 }
 
 
 /* Header */
 header {
-    background: var(--bg-header);
-    color: var(--text-primary);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 12px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: var(--bg-header);
+  color: var(--text-primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #taskFlowLogo {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .logo {
@@ -367,8 +367,9 @@ dialog select {
 
 /* Footer */
 footer {
-    background: var(--bg-footer);
-    color: var(--text-muted);
-    max-width: 480px;
-    
+  background: var(--bg-footer);
+  color: var(--text-muted);
+  width: 100%;
+  text-align: center;
+  padding: 16px;
 }
