@@ -274,6 +274,97 @@ input, select {
 }
 
 
+/* Modais */
+dialog {
+  border: none;
+  margin: auto;
+  border-radius: 16px;
+  padding: 0;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  width: 90%;
+  max-width: 400px;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  transition: all 0.9s ease;
+}
+
+dialog[open] {
+  opacity: 1;
+}
+
+dialog[open]::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+}
+
+
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.modal-header h3 {
+  text-align: center;
+  font-size: 18px;
+}
+
+dialog h4 {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-element);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cancel-button {
+  color: var(--text-secondary);
+}
+
+#confirmDelete,
+#confirmClear,
+#saveEdit {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.modal-actions button:hover {
+  transform: translateY(-1px);
+}
+
+dialog input,
+dialog select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-element);
+  color: var(--text-primary);
+}
+
+
 /* Footer */
 footer {
     background: var(--bg-footer);
