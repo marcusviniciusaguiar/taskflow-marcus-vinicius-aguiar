@@ -20,7 +20,7 @@
     <main>
         <!-- Estatísticas -->
         <section class="stats">
-             <div class="stats-container">
+             <div class="stats-container card">
                 <div class="stats-item">
                     <p>Total</p>
                     <span id="totalCount">0</span>
@@ -47,7 +47,7 @@
 
         <!-- Formulário de nova tarefa -->
         <section class="new-task-section">
-            <div class="new-task-container">
+            <div class="new-task-container card">
                 <form id="newTaskForm">
                     <input id="titleInput" type="text" placeholder="Adicionar tarefa" required>
                         <select id="prioritySelect">
@@ -62,12 +62,10 @@
 
 
         <!-- Controles -->
-         <section class="controls">
+         <section class="controls card">
             <!-- Busca de tarefas -->
             <section class="find-task-section">
-                <div class="find-task-container">
                     <input id="findInput" type="text" placeholder="Buscar tarefa">
-                </div>
             </section>
 
             <!-- Filtros de exibição -->
@@ -88,7 +86,7 @@
 
         <!-- Tarefas -->
         <section class="tasks">
-            <div class="tasks-container">
+            <div class="tasks-container card">
                 <div class="tasks-header">
                     <h3>Tarefas <span id="tasksCount">0</span></h3>
                 </div>
