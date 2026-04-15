@@ -21,7 +21,6 @@ const priorityFilter = document.querySelector("#priorityFilter");
 const statusSelector = document.querySelector("#statusSelector");
 
 // Tarefas
-const tasksCount = document.querySelector("#tasksCount");
 const taskList = document.querySelector("#taskList");
 
 // Modal de Deleção
@@ -183,21 +182,23 @@ const createTaskCard = (task) => {
     }
 
     card.innerHTML = `
-        <div class="task-content">
-            <input type="checkbox" id="taskCheckbox" ${task.done ? "checked": ""}>
-            <div class="task-info"> 
-                <span class="task-title">${task.title}</span>
-                <div class="task-details"> 
-                    <span class="task-date">📆 ${formatDate(task.creationDate)}</span>
-                    <span class="task-priority-span">
-                        ${getPriorityEmoji(task.priority)} ${getPriorityText(task.priority)}
-                    </span>
+        <div class="card">
+            <div class="task-content">
+                <input type="checkbox" id="taskCheckbox" ${task.done ? "checked": ""}>
+                <div class="task-info"> 
+                    <span class="task-title">${task.title}</span>
+                    <div class="task-details"> 
+                        <span class="task-date">📆 ${formatDate(task.creationDate)}</span>
+                        <span class="task-priority-span">
+                            ${getPriorityEmoji(task.priority)} ${getPriorityText(task.priority)}
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="task-actions"> 
-            <button id="editTaskButton">🖊 Editar</button>
-            <button id="deleteTaskButton">🗑 Excluir</button>
+            <div class="task-actions"> 
+                <button id="editTaskButton">🖊 Editar</button>
+                <button id="deleteTaskButton">🗑 Excluir</button>
+            </div>
         </div>
     `;
 
@@ -267,8 +268,6 @@ const showTasks = (tasksArray) => {
         taskList.appendChild(card);
 
     });
-
-    tasksCount.textContent = tasksArray.length;
 
 };
 
