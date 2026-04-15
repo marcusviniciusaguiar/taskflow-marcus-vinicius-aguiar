@@ -96,6 +96,7 @@ header {
 
 #themeToggle:hover {
   background: var(--bg-card-hover);
+  border-color: var(--primary);
   transform: translateY(-1px);
 }
 
@@ -403,11 +404,11 @@ body.light {
 
   --bg-card: #ffffff;
   --bg-card-hover: #f0f2ed;
-  --bg-element: #ffffff;
-  --border-color: #d0d7cc;
+  --bg-element: #f0f2ed;
+  --border-color: #c2cbbf;
 
   --text-primary: #1a2018;
-  --text-secondary: #4a5a45;
+  --text-secondary: #3f4f3a;
   --text-muted: #7a8a75;
 }
 
