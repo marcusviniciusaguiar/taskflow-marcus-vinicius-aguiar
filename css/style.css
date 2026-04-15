@@ -26,6 +26,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    overflow-x: hidden;
 }
 
 
@@ -64,14 +67,14 @@ main {
     background: var(--bg-main);
     color: var(--text-primary);
     flex: 1;
-    max-width: 480px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
 }
 
 #newTaskForm {
   display: flex;
-  gap: 8px;
-  width: 100%;
+  flex-direction: column;
+  gap: 12px;
 }
 
 #titleInput {
