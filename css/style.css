@@ -390,3 +390,48 @@ body.light {
   --text-secondary: #4a5a45;
   --text-muted: #7a8a75;
 }
+
+/* Responsividade */
+
+/* Tablet */
+@media (min-width: 768px) {
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .controls {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .display-filters-section {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .stats-container,
+  .new-task-container {
+    height: 100%;
+  }
+
+  .tasks {
+    grid-column: span 2;
+  }
+
+  .card {
+    padding: 20px;
+  } 
+}
