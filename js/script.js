@@ -1,5 +1,8 @@
 // ELEMENTOS
 
+// Dark Mode
+const themeToggle = document.querySelector("#themeToggle");
+
 // Stats
 const totalCount = document.querySelector("#totalCount");
 const pendingCount = document.querySelector("#pendingCount");
@@ -114,13 +117,52 @@ const darkModeStatus = (status) => {
 
 };
 
+// DARK MODE
+
 const loadDarkMode = () => {
 
     const darkMode = localStorage.getItem("darkMode_taskFlow");
-    darkMode === "true";
-    return darkMode;
+    return darkMode === "true";
 
 };
+
+const applyThemeOnLoad = () => {
+
+    const isDark = loadDarkMode();
+
+    if(!isDark) {
+
+        document.body.classList.add("light");
+
+    }
+
+};
+
+const toggleTheme = () => {
+
+    const isLight = document.body.classList.toggle("light");
+
+    darkModeStatus(!isLight)
+
+    updateModeIcon();
+
+};
+
+const updateModeIcon = () => {
+
+    if(!themeToggle) {
+        return;
+    }
+
+    if(document.body.classList.contains("light")) {
+        themeToggle.textContent = "🌙";
+    } else {
+        themeToggle.textContent = "☀️";
+    }
+
+};
+
+
 
 
 // STATS
@@ -349,6 +391,13 @@ const confirmDeleteTask = () => {
 
 // EVENTOS
 
+// DARK MODE EVENTO
+themeToggle.addEventListener("click", () => {
+    
+    toggleTheme();
+
+});
+
 // STATS EVENTOS
 clearTasksDone.addEventListener("click", () => {
 
@@ -419,4 +468,14 @@ saveEdit.addEventListener("click", () => {
 loadTasks();
 filterTasks();
 updateStats();
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    applyThemeOnLoad();
+    updateModeIcon();
+    loadTasks();
+    filterTasks();
+    updateStats();
+
+});
 
